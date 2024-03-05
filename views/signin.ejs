@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeWithAbdur || LoginPage</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Login Page</h1>
+    <div class="boxShadow siginPage">
+    <form action="/signin" method="POST" id="signinForm">
+        <div class="container">
+        <input type="email" name="email"  id="emailInput" class="input" required>
+        <label for="emailInput" class="label">Email</label>
+        </div>
+        <div class="container">
+        <input type="password" name="password" class="input"  id="passwordInput" required>
+        <label for="passwordInput" class="label">Password</label>
+        </div>
+        <button type="submit" class="techButton">Login</button>
+    </form>
+    </div>
+
+
+<script>
+  document.getElementById("signinForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("emailInput").value;
+    const password = document.getElementById("passwordInput").value;
+
+    const response = await fetch("/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await response.json();
+    
+    if (response.ok) {
+      // Sign in successful, store email in local storage
+      localStorage.setItem("email", email); // Store the entered email
+      alert(data.message);
+       window.location.href = "/"; //redirecting to signi In
+    } else {
+      // Sign in failed, display error message
+      alert(data.message);
+    }
+  });
+</script>
+
+</body>
+</html>

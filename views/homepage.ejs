@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>CodeWithAbdur</title>
+</head>
+<body>
+    <div class="box">
+    <h1>Hii I am CodeWithAbdur</h1>
+    <p></p>
+    <button class="techButton"><a href="/signout">Sign Out</a></button>
+    
+</div>
+    <script>
+        // Retrieve the email from localStorage
+        const email = localStorage.getItem("email");
+
+        // Pass the email to the EJS template
+        document.querySelector('p').innerHTML += `Nice To meet You ${email || 'Login Please'}`;
+    </script>
+</body>
+</html>

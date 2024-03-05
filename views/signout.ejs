@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeWithAbdur || Sign Out</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="box">
+    <h1>Sign Out</h1>
+    <p>Are you sure you want to sign out?</p>
+    <form action="/signout" >
+        <button type="submit" class="techButton" id="signout">Sign Out</button>
+    </form>
+    </div>
+
+    <script>
+        const button = document.getElementById("signout")
+
+        button.addEventListener("click", (e) =>{
+            e.preventDefault()
+
+            localStorage.removeItem("email")
+            alert("SignOut Successfully")
+             window.location.href = "/signin"; //redirecting to signi In
+        })
+    </script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
     <title>CodeWithAbdur || Sign Out</title>
     <link rel="stylesheet" href="/public/style.css">
+    <link rel="shortcut icon" href="/public/favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="box">
@@ -19,7 +20,7 @@
         button.addEventListener("click", (e) =>{
             e.preventDefault()
 
-            localStorage.removeItem("email")
+            localStorage.removeItem(email)
             alert("SignOut Successfully")
              window.location.href = "/signin"; //redirecting to signi In
         })

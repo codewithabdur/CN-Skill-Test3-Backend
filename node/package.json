@@ -4,7 +4,7 @@
   "description": "Authentication project",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config  --experimental-json-modules app.js",
+    "start": "nodemon -r dotenv/config  --experimental-json-modules app.js"
   },
   "author": "CodeWithAbdur",
   "license": "ISC",

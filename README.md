@@ -8,6 +8,13 @@
 
 - # Creating views Folders for storing the views files
 
+- #### 1:- homepage.ejs
+- #### 1:- resetPassword.ejs
+- #### 1:- signin.ejs
+- #### 1:- signup.ejs
+- #### 1:- signout.ejs
+
+
 - ## .env file for storing the mongo uri and port and for more confindential data
 
 - ## app.js file for entry Point

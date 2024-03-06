@@ -9,21 +9,18 @@
     <div class="box">
     <h1>Sign Out</h1>
     <p>Are you sure you want to sign out?</p>
-    <form action="/signout" >
-        <button type="submit" class="techButton" id="signout">Sign Out</button>
-    </form>
+        <button type="submit" class="techButton" id="signout" onclick="logOut()">Sign Out</button>
     </div>
 
     <script>
         const button = document.getElementById("signout")
 
-        button.addEventListener("click", (e) =>{
-            e.preventDefault()
+        function logOut(){
 
-            localStorage.removeItem(email)
+            localStorage.removeItem("email")
             alert("SignOut Successfully")
              window.location.href = "/signin"; //redirecting to signi In
-        })
+        }
     </script>
 </body>
 </html>
